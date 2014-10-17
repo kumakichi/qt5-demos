@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>806</width>
+    <height>283</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sans Word</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="sans_img">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="sans_text"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>806</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_open"/>
+    <addaction name="action_new"/>
+    <addaction name="action_print_text"/>
+    <addaction name="action_print_img"/>
+    <addaction name="separator"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="action_copy"/>
+    <addaction name="action_cut"/>
+    <addaction name="action_paste"/>
+    <addaction name="separator"/>
+    <addaction name="action_scroll_up"/>
+    <addaction name="action_scroll_down"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>旋转</string>
+    </property>
+    <addaction name="action_rotate_90"/>
+    <addaction name="action_rotate_180"/>
+    <addaction name="action_rotate_270"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>镜像</string>
+    </property>
+    <addaction name="action_13"/>
+    <addaction name="action_14"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_about"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_open"/>
+   <addaction name="action_new"/>
+   <addaction name="action_print_text"/>
+   <addaction name="action_print_img"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_copy"/>
+   <addaction name="action_cut"/>
+   <addaction name="action_paste"/>
+   <addaction name="action_scroll_up"/>
+   <addaction name="action_scroll_down"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_rotate_90"/>
+   <addaction name="action_rotate_180"/>
+   <addaction name="action_rotate_270"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_font">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_bold"/>
+   <addaction name="action_Italic"/>
+   <addaction name="action_Underline"/>
+   <addaction name="separator"/>
+   <addaction name="action_Fc"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_sort">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_left_align"/>
+   <addaction name="action_right_align"/>
+   <addaction name="action_center_align"/>
+   <addaction name="action_two_side"/>
+  </widget>
+  <action name="action_open">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/open.png</normaloff>:/images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="statusTip">
+    <string>Open a new file</string>
+   </property>
+  </action>
+  <action name="action_new">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/new.png</normaloff>:/images/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建</string>
+   </property>
+  </action>
+  <action name="action_print_text">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/printText.png</normaloff>:/images/printText.png</iconset>
+   </property>
+   <property name="text">
+    <string>打印文本</string>
+   </property>
+  </action>
+  <action name="action_print_img">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/printImage.png</normaloff>:/images/printImage.png</iconset>
+   </property>
+   <property name="text">
+    <string>打印图像</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="action_copy">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/copy.png</normaloff>:/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制</string>
+   </property>
+  </action>
+  <action name="action_cut">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/cut.png</normaloff>:/images/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>剪切</string>
+   </property>
+  </action>
+  <action name="action_paste">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/paste.png</normaloff>:/images/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴</string>
+   </property>
+  </action>
+  <action name="action_scroll_up">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/zoomin.png</normaloff>:/images/zoomin.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="action_scroll_down">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/zoomout.png</normaloff>:/images/zoomout.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="action_rotate_90">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/rotate90.png</normaloff>:/images/rotate90.png</iconset>
+   </property>
+   <property name="text">
+    <string>旋转90°</string>
+   </property>
+  </action>
+  <action name="action_rotate_180">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/rotate180.png</normaloff>:/images/rotate180.png</iconset>
+   </property>
+   <property name="text">
+    <string>旋转180°</string>
+   </property>
+  </action>
+  <action name="action_rotate_270">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/rotate270.png</normaloff>:/images/rotate270.png</iconset>
+   </property>
+   <property name="text">
+    <string>旋转270°</string>
+   </property>
+  </action>
+  <action name="action_13">
+   <property name="text">
+    <string>纵向镜像</string>
+   </property>
+  </action>
+  <action name="action_14">
+   <property name="text">
+    <string>横向镜像</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="action_bold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/bold.png</normaloff>:/images/bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>加粗</string>
+   </property>
+  </action>
+  <action name="action_Italic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/italic.png</normaloff>:/images/italic.png</iconset>
+   </property>
+   <property name="text">
+    <string>斜体</string>
+   </property>
+  </action>
+  <action name="action_Underline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/underline.png</normaloff>:/images/underline.png</iconset>
+   </property>
+   <property name="text">
+    <string>下划线</string>
+   </property>
+  </action>
+  <action name="action_Fc">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/color.png</normaloff>:/images/color.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体颜色</string>
+   </property>
+  </action>
+  <action name="action_left_align">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/left.png</normaloff>:/images/left.png</iconset>
+   </property>
+   <property name="text">
+    <string>左对齐</string>
+   </property>
+  </action>
+  <action name="action_right_align">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/right.png</normaloff>:/images/right.png</iconset>
+   </property>
+   <property name="text">
+    <string>右对齐</string>
+   </property>
+  </action>
+  <action name="action_center_align">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/center.png</normaloff>:/images/center.png</iconset>
+   </property>
+   <property name="text">
+    <string>居中</string>
+   </property>
+  </action>
+  <action name="action_two_side">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/justify.png</normaloff>:/images/justify.png</iconset>
+   </property>
+   <property name="text">
+    <string>两端对齐</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>action_copy</sender>
+   <signal>triggered()</signal>
+   <receiver>sans_text</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_cut</sender>
+   <signal>triggered()</signal>
+   <receiver>sans_text</receiver>
+   <slot>cut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_paste</sender>
+   <signal>triggered()</signal>
+   <receiver>sans_text</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

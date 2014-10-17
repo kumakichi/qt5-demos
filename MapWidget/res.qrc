@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/zoomin.png</file>
+        <file>img/zoomout.png</file>
+        <file>maps.txt</file>
+        <file>img/China.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/audio_next.png</file>
+        <file>img/audio_pause.png</file>
+        <file>img/audio_play.png</file>
+        <file>img/audio_prev.png</file>
+        <file>img/audio_stop.png</file>
+        <file>img/audio_vol_dec.png</file>
+        <file>img/audio_vol_inc.png</file>
+        <file>img/monitor_brightness_up.png</file>
+        <file>img/monitor_brightness_down.png</file>
+        <file>img/audio_media.png</file>
+        <file>img/Fn.png</file>
+    </qresource>
+</RCC>
